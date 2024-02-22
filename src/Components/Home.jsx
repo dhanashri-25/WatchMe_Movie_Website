@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Sidenav from './Template/Sidenav';
 import Topnav from './Template/Topnav';
 import axios from "../Util/axios"
+import Header from "./Template/Header"
 
 const Home = () => {
   document.title="WatchMe|Homepage";
@@ -29,6 +30,7 @@ const Home = () => {
       <Sidenav></Sidenav>
       <div className='w-[80%] h-full'>
         <Topnav></Topnav>
+        <Header></Header>
       </div>
       
     </>
