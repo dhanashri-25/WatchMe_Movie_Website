@@ -22,21 +22,21 @@ const Topnav = () => {
   },[query]);
   return (
     <>
-    <div className='w-full h-[10vh] relative flex justify-start ml-[15%] items-center'>
-      <i className='text-zinc-200 p-5 ml-5 ri-search-line text-3xl'></i>
+    <div className='w-[80%] mx-auto h-[10vh] relative flex justify-start ml-[15%] items-center'>
+      <i className='text-zinc-200 p-3 ml-5 ri-search-line text-3xl'></i>
       <input 
       onChange={(e)=>setquery(e.target.value)}
       value={query}
       type='text'
-      className='p-5 text-xl outline-none border-none bg-transparent text-white w-[50%] mx-10' placeholder='seach anything'/>
+      className=' text-xl outline-none border-none bg-transparent text-white w-[50%] mx-10' placeholder='seach anything'/>
 
       {query.length>0&&(// if kuch nhi likha hai to search then icon nhi dikhega
         <i 
         onClick={()=> setquery("")}//on clicking icon of cancel search me jo hai wo empty ho jayega
-        className='ri-close-fill p-5 text-zinc-400 text-3xl'></i>
+        className='absolute right-0 ri-close-fill text-zinc-400 text-3xl'></i>
 
       )}
-      <div className='w-[50%] rounded max-h-[50vh] overflow-auto bg-zinc-200 absolute top-[90%]'>
+      <div className='w-[50%] rounded max-h-[50vh] overflow-auto bg-zinc-200 absolute top-[95%] left-[5%]'>
         {/* search me data dikhane k liye */}
 
         {searches && searches.length>0 && searches.map((s,i)=>(
